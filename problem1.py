@@ -8,7 +8,7 @@
 
 """ Sample output:
 Enter in the coefficients for a quadratic equation in the format:
-  ax^2 + bx + c = 0
+ax^2 + bx + c = 0
 a:3
 b:d
 c:1
@@ -28,7 +28,17 @@ The roots are -4.0 and -4.0
 """
 import os
 os.system('cls')
+import math
 
+try:
+  print("Enter in the coefficients for a quadratic equation in the format: ax^2+bx+c=0\n")
+  a=float(input("Enter coefficient a\n"))
+  b=float(input("Enter coefficient b\n"))
+  c=float(input("Enter coefficient c\n"))
+  d = (b**2) - (4*a*c)
+  sol1 = (b*-1-math.sqrt(d))/(2*a)
+  sol2 = (b*-1+math.sqrt(d))/(2*a)
+  print(f'The roots are {sol1} and {sol2}')
+except:
+  print("There is no solution")
 
-print("Enter in the coefficients for a quadratic equation in the format:")
-print("  ax^2 + bx + c = 0")

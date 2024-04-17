@@ -7,7 +7,11 @@
 # modify this code with  a try...except 
 # block so that the user will allow them to enter an integer,
 # or display an error message if they enter in something else.
+try:
+    number = input("Please enter in an integer value\n")
+    number = int(number)
+    print(number)
+except:
+    print("This is not an integer")
 
-number = input("Please enter in an integer value")
-number = int(number)
-print(number)
+
